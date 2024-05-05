@@ -7,11 +7,6 @@ import Error404 from './components/Error404';
 import Users from './components/Users';
 
 function App() {
-  let str = '1001010101111011000000111';
-  let search = '1';
-  let count = str.split(search).length - 1;
-  console.log(count);
-  let isLoggedIn = false;
   return (
     <div className='App'>
       <Routes>
