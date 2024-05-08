@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+.modal-back-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.2s linear;
+  background-color: #f9f9f9;
+  z-index: 100;
+  animation: modalOpen 0.2s linear;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+  background-color: bisque;
+  transition: all 0.2s linear;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 101;
+  user-select: none;
+  opacity: 1 !important;
+  box-shadow: 0 0 10px 0 #a2a2a2;
+}
+@keyframes modalOpen {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
