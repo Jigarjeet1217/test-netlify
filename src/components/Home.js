@@ -1,19 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from './Modal';
+import HoverCount from '../custom/HoverCount';
+import Counter from '../custom/Counter';
+// import Modal from './Modal';
 
 const Home = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   return (
     <div>
       <Link to={'/about'}>About Us</Link>
       <br />
       <Link to={'/contacts'}>Contacts</Link>
+
       <div>Home</div>
-      <button type='button' onClick={() => setOpen(!open)}>
+      <div
+        style={{
+          padding: '20px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+        }}
+      >
+        <HoverCount />
+        <Counter />
+      </div>
+      {/* <button type='button' onClick={() => setOpen(!open)}>
         Open Modal
-      </button>
-      {open && (
+      </button> */}
+      {/* {open && (
         <Modal
           // ref={modalRef}
           isOpen={open}
@@ -24,7 +38,7 @@ const Home = () => {
           content={'from modal'}
           onClose={() => setOpen(false)}
         />
-      )}
+      )} */}
     </div>
   );
 };
